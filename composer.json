@@ -1,0 +1,17 @@
+{
+    "name": "robwittman/shopify-services",
+    "description": "Website for shopifyservices.com",
+    "authors": [
+        {
+            "name": "Rob Wittman",
+            "email": "rob@ihsdigital.com"
+        }
+    ],
+    "require": {
+        "slim/slim": "^3.8",
+        "phpmailer/phpmailer": "^5.2"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "^121.0"
+    }
+}

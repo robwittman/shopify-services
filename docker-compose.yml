@@ -1,0 +1,22 @@
+version: "2"
+services:
+    web:
+        build: .
+        ports:
+            - 80:80
+        volumes:
+            - ./html:/var/www/html
+            - /usr/sbin/sendmail:/usr/sbin/sendmail
+        environment:
+            - MYSQL_USER
+            - MYSQL_DATABASE
+            - MYSQL_PASWORD
+    mysql:
+        image: mysql:5.6
+        volumes:
+            - ./data:/var/lib/mysql
+        environment:
+            - MYSQL_ROOT_PASSWORD
+            - MYSQL_DATABASE
+            - MYSQL_USER
+            - MYSQL_PASSWORD
